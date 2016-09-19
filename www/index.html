@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>Base</title>
+
+        <meta name="description" content="Base template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="page-header">
+                        <h1>Plantilla base</h1>
+                    </div>
+
+                    <p class="lead">
+                        Aquesta plantilla s'encarrega de processar arxius less i sass, importar moduls npm, concatenar i minificar codi javascript.
+                    </p>
+
+                    <h2>Codi</h2>
+
+                    <ul>
+                        <li>
+                            Organitza el teu codi SCSS dins del directori <code>assets/sass</code>.
+                            El resultat es copiarà a <code>www/css/main.css</code>
+                        </li>
+                        <li>
+                            Organitza el teu codi JS dins del directori <code>assets/js</code>.
+                            El resultat es copiarà a <code>www/js/main.js</code>
+                        </li>
+                        <li>
+                            Posa les teves tipografies dins del directori <code>assets/fonts</code>.
+                            Aquestes es copiaran a <code>www/fonts</code>
+                        </li>
+                        <li>
+                            Dins l'arxiu <code>gulpfile.js</code> pots afegir moduls dins l'array <code>npmModules</code>.
+                            Aquests seran concatenats i copiats a <code>www/js/plugins.js</code>
+                        </li>
+
+                    </ul>
+
+                    <h2>Funcionament</h2>
+
+                    <ul>
+                        <li>Obre la línia de comanda (cmd + r) i executa "cmd"</li>
+                        <li>Navega fins a la carpeta del projecte</li>
+                        <li>Executa <code>npm install --global gulp-cli</code> per instalar el paquet gulp</li>
+                        <li>Instal·la les dependències especificades a l'arxius <code>package.json</code> executant <code>npm install --no-bin-links</code></li>
+                        <li>Executa el gulp (hauràs d'utilitzar la ruta fins al binari ex: <code>D:\Users\jaume.sala\AppData\Roaming\npm\gulp</code> (Pensa a canviar el nom d'usauri)</li>
+                        <li>Per tal de no haver d'executar el gulp cada cop que fem un canvi a un arxiu (css/js), podem executar la comanda "watch", la qual estarà pendent de canvis en els nostres arxius. Executa <code>D:\Users\jaume.sala\AppData\Roaming\npm\gulp watch</code></li>
+
+
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
