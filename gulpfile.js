@@ -72,6 +72,12 @@ elixir(mix => {
             elixir.config.publicPath + '/' + elixir.config.css.outputFolder + '/main' + min + '.css'
         )
 
+        // main.less
+        //.less(
+        //    'main.less',
+        //   elixir.config.publicPath + '/' + elixir.config.css.outputFolder + '/main' + min + '.css'
+        //)
+
         // main.js
         .scriptsIn(
             elixir.config.assetsPath + '/js',
