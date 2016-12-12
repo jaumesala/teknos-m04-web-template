@@ -89,7 +89,7 @@ elixir(mix => {
             npmModules,
             elixir.config.publicPath + '/' + elixir.config.js.outputFolder + '/plugins' + min + '.js',
             '.'
-        )
+        );
 
         // copy files
         for (var i = 0, len = copyToPublic.length; i < len; i++) {
