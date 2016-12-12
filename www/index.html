@@ -32,7 +32,7 @@
 
                     <ul>
                         <li>
-                            Organitza el teu codi SCSS dins del directori <code>assets/sass</code>.
+                            Organitza el teu codi SASS dins del directori <code>assets/sass</code>, o bé, el teu codi LESS dins el directori <code>assets/less</code>. (Recorda editar l'arxiu <code>gulpfile.js</code>)
                             El resultat es copiarà a <code>www/css/main.css</code>
                         </li>
                         <li>
@@ -50,21 +50,25 @@
 
                     </ul>
 
-                    <h2>Funcionament</h2>
+                    <h2>Instal·lació</h2>
 
                     <ul>
                         <li>Obre la línia de comanda (cmd + r) i executa "cmd"</li>
                         <li>Navega fins a la carpeta del projecte</li>
                         <li>Executa <code>npm install --global gulp-cli</code> per instalar el paquet gulp</li>
-                        <li>Instal·la les dependències especificades a l'arxius <code>package.json</code> executant <code>npm install --no-bin-links</code></li>
-                        <li>Executa el gulp (hauràs d'utilitzar la ruta fins al binari ex: <code>D:\Users\jaume.sala\AppData\Roaming\npm\gulp</code> (Pensa a canviar el nom d'usauri)</li>
-                        <li>Per tal de no haver d'executar el gulp cada cop que fem un canvi a un arxiu (css/js), podem executar la comanda "watch", la qual estarà pendent de canvis en els nostres arxius. Executa <code>D:\Users\jaume.sala\AppData\Roaming\npm\gulp watch</code></li>
-
-
-
-
-
+                        <li>Instal·la les dependències especificades a l'arxius <code>package.json</code> executant la comanda <code>npm install --no-bin-links</code></li>
                     </ul>
+
+                    <h2>Funcionament</h2>
+                    <ul>
+                        <li><strong>Recordeu</strong> a modificar l'arxiu <code>gulpfile.js</code> i adaptar-lo a les vostres necessitats.</li>
+                        <li>Per a preprocessar el codi, executa el Gulp amb la comanda <code>gulp</code> (Potser hauràs d'utilitzar la ruta fins al binari ex: <code>D:\Users\jaume.sala\AppData\Roaming\npm\gulp</code> (Pensa a canviar el nom d'usauri)</li>
+                        <li>Per tal de no haver d'executar el Gulp cada cop que fem un canvi a un arxiu (html/css/js), podem executar la tasca "watch", la qual estarà pendent de canvis en els nostres arxius. Executa <code>gulp watch</code></li>
+                        <li>Un cop tenim el nostre codi apunt, el podem minificar, es a dir, crear versions comprimides del codi utlitzant la opció "production". Per fer-ho executarem el Gulp amb la comanda <code>gulp --production</code>, això crearà versions amb l'extensió ".min".</li>
+                    </ul>
+
+                    <br>
+                    <br>
 
                 </div>
             </div>
