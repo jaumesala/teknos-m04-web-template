@@ -18,9 +18,10 @@ require('laravel-elixir-vue');
  */
 
 var npmPath         = 'node_modules/';
+var publicPath      = 'www';
 var min             = elixir.config.production ? '.min' : '';
 
-elixir.config.publicPath    = 'www';
+elixir.config.publicPath    = publicPath;
 elixir.config.assetsPath    = 'assets';
 
 
@@ -98,6 +99,36 @@ elixir(mix => {
                 copyToPublic[i][1]
             );
         }
+
+        // https://browsersync.io/docs/options/
+        mix.browserSync({
+            files: [
+                publicPath + '/**/*.html',
+                publicPath + '/**/*.css',
+                publicPath + '/**/*.js'
+            ],
+
+            watchOptions: {
+                usePolling: true
+            },
+
+            snippetOptions: {
+                rule: {
+                    match: /(<\/body>|<\/pre>)/i,
+                    fn: (snippet, match) => snippet + match
+                }
+            },
+
+            server: {
+                baseDir: publicPath,
+                index: "index.html"
+            },
+
+            directory: false,
+
+            proxy: false
+
+        });
 
 });
 
